@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COVID Tracker App</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="main.css">
+</head>
+<header>
+    <div class="header">
+        <h1>COVID Tracker</h1>
+        <label for="state">Choose a State:</label>
+        <body>
+        <select name="state" id="state">
+          <option value="" selected="selected"></option>
+          <option value="al">Alabama</option>
+          <option value="ak">Alaska</option>
+          <option value="az">Arizona</option>
+          <option value="ar">Arkansas</option>
+          <option value="ca">California</option>
+          <option value="co">Colorado</option>
+          <option value="ct">Connecticut</option>
+          <option value="de">Delaware</option>
+          <option value="fl">Florida</option>
+          <option value="ga">Georgia</option>
+          <option value="hi">Hawaii</option>
+          <option value="id">Idaho</option>
+          <option value="il">Illinois</option>
+          <option value="in">Indiana</option>
+          <option value="ia">Iowa</option>
+          <option value="ks">Kansas</option>
+          <option value="ky">Kentucky</option>
+          <option value="la">Louisiana</option>
+          <option value="me">Maine</option>
+          <option value="md">Maryland</option>
+          <option value="ma">Massachusetts</option>
+          <option value="mi">Michigan</option>
+          <option value="mn">Minnesota</option>
+          <option value="ms">Mississippi</option>
+          <option value="mo">Missouri</option>
+          <option value="mt">Montana</option>
+          <option value="ne">Nebraska</option>
+          <option value="nv">Nevada</option>
+          <option value="nh">New Hampshire</option>
+          <option value="nj">New Jersey</option>
+          <option value="nm">New Mexico</option>
+          <option value="ny">New York</option>
+          <option value="nc">North Carolina</option>
+          <option value="nd">North Dakota</option>
+          <option value="oh">Ohio</option>
+          <option value="ok">Oklahoma</option>
+          <option value="or">Oregon</option>
+          <option value="pa">Pennsylvania</option>
+          <option value="ri">Rhode Island</option>
+          <option value="sc">South Carolina</option>
+          <option value="sd">South Dakota</option>
+          <option value="tn">Tennessee</option>
+          <option value="tx">Texas</option>
+          <option value="ut">Utah</option>
+          <option value="vt">Vermont</option>
+          <option value="va">Virginia</option>
+          <option value="wa">Washington</option>
+          <option value="wv">West Virginia</option>
+          <option value="wi">Wisconsin</option>
+          <option value="wy">Wyoming</option>
+        </select> 
+    </div>
+    </header> 
+
+<div class='wrapper'>
+    <div class='container'>
+        <div id="map" class="first" style="width: 600px; height: 300px;">
+        </div>
+                <div class='row'>
+                    <p class="date-updated">Last Updated: 
+                        <label class="date-updated-val"> </label>
+                    </p>
+                    <p class="total-today">New Cases Today:
+                        <label class="total-today-val"> </label>
+                    </p>
+                    <p class="new-deaths">New Deaths Today: 
+                        <label class="new-deaths-val"> </label>
+                    </p>
+                    <p class="total-positive">Total Positive Cases: 
+                        <label class="total-positive-val"> </label>
+                    </p>
+                    <p class="total-negative">Total Negative Tests: 
+                        <label class="total-negative-val"> </label>
+                    </p>
+                    <p class="total-deaths">Total Deaths: 
+                        <label class="total-deaths-val"> </label>
+                    </p>
+                </div>
+    </div>
+</div>
+    
+<div class='wrapper'>
+    <div class="second"> 
+        <p class='news-title'>News API here</p>
+        <ul style="list-style-type:none" id="results-list"></ul> 
+    </div>
+
+
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="map.js/raphael.js"></script>
+    <script src="map.js/jquery.usmap.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+

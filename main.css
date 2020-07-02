@@ -1,0 +1,56 @@
+.header, .select-state {
+    text-align: center;
+    border: 3px solid green;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    align-items: center;
+    border: 3px solid green;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    flex: 1;
+    margin: 10px;
+    align-items: center;
+}
+.second {
+    margin-top: 20px;
+    max-width: 100%;
+    float: center;
+    max-height: 100%;
+    border: 3px solid green;
+}
+.news-title {
+    text-align: center;
+}
+
+
+@media all and (min-width: 800px) {
+    .wrapper {
+      width: auto;
+      margin: auto;
+    }
+    .container {
+      flex-wrap: wrap; 
+    }
+    .first {
+      flex-direction: row;
+    }
+    header {
+      display: flex;
+    }
+
+    .row {
+    flex: 1;
+    margin: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;  
+    }
