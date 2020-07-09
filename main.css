@@ -5,7 +5,7 @@
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  width: 71%;
+ /* width: 71%; */
   margin: auto;
   height: auto;
   padding-bottom: 20px;
@@ -15,6 +15,12 @@
 body {
   background-color: #B5B9BA;
   background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; 
 }
 
 .box select {
@@ -32,17 +38,19 @@ ul {
   font-weight: 700;
   font-style: normal;
   background-color: #B5B9BA;
+  justify-content: center;
   align-items: center;
-  text-align: right;
+  text-align: center;
+  /* text-align: right; */
   margin: auto;
   padding-left: 10px;
-  width: 70%;
+  /* width: 70%; */
   display: flex;
   flex-wrap: wrap;
 }
 
 .row {
-  flex: 1;
+ /*  flex: 1; */
   margin: 10px;
   text-align: left;
   align-items: center;
@@ -66,7 +74,7 @@ label {
   flex-direction: column;
   background-color: #B5B9BA;
   margin: auto;
-  max-width: 71%;
+  /* max-width: 71%; */
   float: center;
   max-height: 100%;
 }
@@ -93,6 +101,11 @@ a:hover {
   margin-left: 20px;
 }
 
+#map svg {
+  width: 100%;
+  height: auto;
+}
+
 /* MEDIA QUERIES */
 
 @media all and (max-width: 800px) {
@@ -103,6 +116,7 @@ a:hover {
 
   .container {
     flex-wrap: wrap; 
+    margin-top: 0;
   }
 
   .first {

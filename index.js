@@ -111,9 +111,25 @@ $('#map').on('usmapclick', function(event, data) {
     stateHoverStyles: {fill: '#7A151F'}
   });
 
+const $map = $('#map')
+
+function resize() {
+  $map.css({
+    height: 'auto',
+    width: '100%',
+  })
+}
 
 $(document).ready(function() {
     $('#map').usmap({});
+    setTimeout(() => {
+      resize()
+    }, 100)
   });
+
+
+//$(document).ready(function() {
+//   $('#map').usmap({});
+//  });
 
   
