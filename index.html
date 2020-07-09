@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COVID Tracker App</title>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    rel="stylesheet"
+    type="text/css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/tbl4ipn.css">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="main.css">
 </head>
+<body>
 <header>
     <div class="header">
-        <h1>COVID Tracker</h1>
+        <h1>COVID-19 Tracker</h1>
+       <div class="box">
         <label for="state">Choose a State:</label>
-        <body>
         <select name="state" id="state">
           <option value="" selected="selected"></option>
           <option value="al">Alabama</option>
@@ -66,12 +72,12 @@
           <option value="wi">Wisconsin</option>
           <option value="wy">Wyoming</option>
         </select> 
+        </div>
     </div>
     </header> 
 
-<div class='wrapper'>
     <div class='container'>
-        <div id="map" class="first" style="width: 600px; height: 300px;">
+        <div id="map" class="first" style="width: 500px; height: 300px;">
         </div>
                 <div class='row'>
                     <p class="date-updated">Last Updated: 
@@ -94,17 +100,14 @@
                     </p>
                 </div>
     </div>
-</div>
     
-<div class='wrapper'>
     <div class="second"> 
-        <p class='news-title'>News API here</p>
+        <h2 class='news-title'>COVID-19 News Updates</h2>
         <ul style="list-style-type:none" id="results-list"></ul> 
     </div>
 
 
-    </div>
-</div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="map.js/raphael.js"></script>
     <script src="map.js/jquery.usmap.js"></script>

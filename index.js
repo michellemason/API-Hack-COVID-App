@@ -125,6 +125,11 @@ $('#map').on('usmapclick', function(event, data) {
     $('select').val(data.name.toLowerCase());
   });
 
+  $('#map').usmap({
+    stateHoverStyles: {fill: '#7A151F'}
+  });
+
+
 $(document).ready(function() {
     $('#map').usmap({});
   });

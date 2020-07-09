@@ -1,16 +1,43 @@
+
 .header, .select-state {
+    font-family: pt-mono, monospace;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
-    border: 3px solid green;
-    width: 100%;
+   /* border: 3px solid green; */
+    width: 71%;
+    margin: auto;
     height: auto;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    background-color: #B5B9BA;
+}
+
+body {
+  background-color: #B5B9BA;
+  background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
+}
+
+.box select {
+  border: none;
+}
+
+.box:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: #7A151F;
 }
 
 .container {
+    font-family: pt-mono, monospace;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #B5B9BA;
     align-items: center;
-    border: 3px solid green;
+    text-align: right;
     margin: auto;
+    padding-left: 10px;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -20,37 +47,62 @@
     margin: 10px;
     align-items: center;
 }
+
+.row, p {
+  font-weight: 700;
+}
+
+label {
+  font-weight: 300;
+}
 .second {
-    margin-top: 20px;
-    max-width: 100%;
+    font-family: pt-mono, monospace;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    background-color: #B5B9BA;
+    margin: auto;
+    max-width: 71%;
     float: center;
     max-height: 100%;
-    border: 3px solid green;
+
 }
 .news-title {
     text-align: center;
+    font-weight: 600;
 }
 
 
-@media all and (min-width: 800px) {
-    .wrapper {
-      width: auto;
-      margin: auto;
-    }
-    .container {
-      flex-wrap: wrap; 
-    }
-    .first {
-      flex-direction: row;
-    }
-    header {
-      display: flex;
-    }
+a:link, a:visited {
+  color: #272A2A;
+}
 
-    .row {
-    flex: 1;
-    margin: 10px;
+a:hover {
+  color: #7A151F;
+}
+
+
+@media all and (max-width: 800px) {
+  .wrapper {
+    width: auto;
+    margin: auto;
+  }
+  .container {
+    flex-wrap: wrap; 
+  }
+  .first {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;  
-    }
+  }
+  header {
+    display: flex;
+  }
+
+  .row {
+  flex: 1;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;  
+  }
+}
