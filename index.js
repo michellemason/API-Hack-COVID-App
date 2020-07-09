@@ -8,26 +8,24 @@ const stateFilename = '/current.json';
 const newsURL = 'https://api.smartable.ai/coronavirus/news/US-'
 const subscriptionKey = 'f514bcaac5a941c68c7e7bfa1c67e19a';
 
-
-
 // helper function to format url string with chosen state
 function formatStatsURL(state) {
-    var urlString = stateURL + state + stateFilename;
+    let urlString = stateURL + state + stateFilename;
     return urlString;
 }
 
 // helper function to format news URL string with chosen state
 function formatNewsURL(state) {
-    var urlString = newsURL + state;
+    let urlString = newsURL + state;
     return urlString
 }
 
 // helper function to parse date data
 function formatDate(updateDate) {
-    var year = updateDate.toString().substring(0, 4);
-    var month = updateDate.toString().substring(4, 6);
-    var day = updateDate.toString().substring(6, 8);
-    var totalDate = month + '/' + day + '/' + year;
+    let year = updateDate.toString().substring(0, 4);
+    let month = updateDate.toString().substring(4, 6);
+    let day = updateDate.toString().substring(6, 8);
+    let totalDate = month + '/' + day + '/' + year;
     return totalDate;
 }
 
@@ -40,12 +38,9 @@ function getCovidData(endpointURL) {
 
 // function to fetch state-specific news data from URL
 function getCovidNews(fullNewsURL) {
-    // format request header
-    //var reqHeader = new Headers();
-    //reqHeader.append('Subscription-Key', subscriptionKey);
 
     // format GET request with header
-    var request = new Request(fullNewsURL, {
+    let request = new Request(fullNewsURL, {
         method: 'GET',
         headers: {
             'Subscription-Key': subscriptionKey
@@ -60,11 +55,8 @@ function getCovidNews(fullNewsURL) {
 
 // function to parse out the data for displays
 function parseCovidData(covidJson) {
-    var numPositive = covidJson.positive;
-    var positiveInc = covidJson.positiveIncrease;
-
-    //console.log("Num positive for " + covidJson.state + " = " + numPositive);
-    //console.log("Positive increase for " + covidJson.state + " = " + positiveInc);
+    let numPositive = covidJson.positive;
+    let positiveInc = covidJson.positiveIncrease;
 
     $('.date-updated-val').text(formatDate(covidJson.date));
     $('.total-today-val').text(covidJson.positiveIncrease);
@@ -72,7 +64,6 @@ function parseCovidData(covidJson) {
     $('.total-positive-val').text(covidJson.positive);
     $('.total-negative-val').text(covidJson.negative);
     $('.total-deaths-val').text(covidJson.death);
-    // $('.total-recovered-val').text(covidJson.recovered);
 }
 
 function parseCovidNews(newsJson) {
@@ -87,19 +78,9 @@ function parseCovidNews(newsJson) {
         $('#results-list').append(
             `<li><a href='${newsElement.webUrl}'><h3>${newsElement.title}</h3></a>
             <p>${newsElement.excerpt}</p>
-            </li>`
-          )
-        );
+            </li>`));
     }
-
-    //console.log(newsJson);
-
-    
 }
-
-
-
-
 
 // JQuery trigger for select box change
 $('select').on('change', function () {
@@ -125,6 +106,7 @@ $('#map').on('usmapclick', function(event, data) {
     $('select').val(data.name.toLowerCase());
   });
 
+  // map styling needing to be done in js
   $('#map').usmap({
     stateHoverStyles: {fill: '#7A151F'}
   });
