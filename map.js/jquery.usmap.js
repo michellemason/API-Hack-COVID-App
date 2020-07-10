@@ -47,7 +47,7 @@
   };
   
   
-  // Some constants
+  // Some constants 930
   var WIDTH = 930,
       HEIGHT = 630,
       LABELS_WIDTH = 70;

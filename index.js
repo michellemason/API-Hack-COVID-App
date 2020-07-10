@@ -66,6 +66,7 @@ function parseCovidData(covidJson) {
     $('.total-deaths-val').text(covidJson.death);
 }
 
+// function to parse the news into the various html elements
 function parseCovidNews(newsJson) {
     $('#results-list').empty();
     if (newsJson.news.length == 0) {
@@ -94,25 +95,21 @@ $('select').on('change', function () {
 
 // MAP FUNCTIONS
 
+// similar to above select change function, except use map
 $('#map').on('usmapclick', function(event, data) {
-    // format the request endpoint url for selected-state covid data
-    // then get the data through getCovidData function
     getCovidData(formatStatsURL(data.name.toLowerCase()));
-
-    // format the request endpoint url for selected-state news data
     getCovidNews(formatNewsURL(data.name));;
-
-    // change value of the select box to be the state the user clicked
     $('select').val(data.name.toLowerCase());
-  });
+});
 
-  // map styling needing to be done in js
-  $('#map').usmap({
-    stateHoverStyles: {fill: '#7A151F'}
-  });
+// map styling needing to be done in js
+$('#map').usmap({
+stateHoverStyles: {fill: '#7A151F'}
+});
 
 const $map = $('#map')
 
+// resize map
 function resize() {
   $map.css({
     height: 'auto',
@@ -126,10 +123,4 @@ $(document).ready(function() {
       resize()
     }, 100)
   });
-
-
-//$(document).ready(function() {
-//   $('#map').usmap({});
-//  });
-
   
