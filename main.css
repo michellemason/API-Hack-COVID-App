@@ -123,9 +123,9 @@ a:hover {
     flex-direction: row;
   }
 
-  header {
+  /*header {
     display: flex;
-  }
+  } */
 
   .row {
     flex: 1;
